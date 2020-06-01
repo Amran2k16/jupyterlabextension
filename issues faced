@@ -1,0 +1,9 @@
+jlpm wasnt working. This was due to conda errors. or maybe even node errors.
+When i checked the sourcefile for jlpm inside of a /bin directory, it was pointing
+to a file in /opt/... which did not exist. The src path itself was working.
+The error code was good. I solved the issue by installing miniconda/anaconda again. 
+But have to run conda activate and then make the switch. Might have to just reinstall conda again tbh. 
+This was not the solution. Instead it was a complete mess up of my PATH variable....
+
+"react" dependency not met. I dont need to install this directly. React is a subdependency which should be automatically installed
+when i install the @jupyterlab/ui-components package.

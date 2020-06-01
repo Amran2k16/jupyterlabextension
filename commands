@@ -1,0 +1,30 @@
+### Use a specific conda environment for extensions
+conda create -n jupyterlab-extension
+conda activate jupyterlab-extension
+
+### Add a new extension using the cookiecutter tool to setup the environment
+cookiecutter https://github.com/jupyterlab/extension-cookiecutter-ts
+
+### Install javascript packages and run build commands using JLPM. (This is jupyterlabs bundled version of yarn. Can opt to use npm or yarn itself if you prefer)
+jlpm install
+
+jlpm labextension install . --no-build 
+
+### To start a jupyterlab instance in watch mode. 
+jupyter lab --watch
+
+### Examples of installing some dependencies
+jlpm add @jupyterlab/apputils
+jlpm add @jupyterlab/application
+
+### To rebuild the extension. (Have to do this step because jupyterlab is using the compiled javascript files in /lib. (does it use webpack to compile!!?))
+jlpm run build 
+
+### To link an extension to jupyter
+jupyter labextension link . 
+
+### list all installed labextensions (This uses the jupyter command, because the extensions are installed into jupyter)
+jupyter labextension list
+
+### run in watch mode
+jlpm run watch

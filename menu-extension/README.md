@@ -1,4 +1,4 @@
-# jupyterlab_apod
+# menu-extension
 
 ![Github Actions Status](https://github.com/my_name/myextension/workflows/Build/badge.svg)
 
@@ -13,7 +13,7 @@ A JupyterLab extension.
 ## Install
 
 ```bash
-jupyter labextension install jupyterlab-apod
+jupyter labextension install menu-extension
 ```
 
 ## Contributing
@@ -26,7 +26,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Move to jupyterlab_apod directory
+# Move to menu-extension directory
 
 # Install dependencies
 jlpm
@@ -53,5 +53,5 @@ jupyter lab --watch
 
 ```bash
 
-jupyter labextension uninstall jupyterlab-apod
+jupyter labextension uninstall menu-extension
 ```
